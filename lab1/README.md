@@ -16,12 +16,10 @@ Z_1 = X W_1 + b_1 \quad (105 \times 8)
 $$
 
 $$
-
 A_1 = \max(0, Z_1) \quad (105 \times 8)
 $$
 
 $$
-
 Z_2 = A_1 W_2 + b_2 \quad (105 \times 3)
 $$
 
