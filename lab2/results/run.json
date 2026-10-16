@@ -1,5 +1,5 @@
 {
-  "source_csv": "C:\\Users\\bllee\\Downloads\\deeplr\\lab2\\creditcard.csv",
+  "source_csv": "C:\\Users\\bllee\\Downloads\\bd\\deepl_labs\\lab2\\creditcard.csv",
   "features": [
     "V1",
     "V2",
