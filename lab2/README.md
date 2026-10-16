@@ -66,9 +66,9 @@ $$
 
 ROC-AUC на validation: `0.9733`
 
-![roc_validation.png](roc_validation.png)
+![roc_validation.png](results/roc_validation.png)
 
-![pr_validation.png](pr_validation.png)
+![pr_validation.png](results/pr_validation.png)
 
 > Висока ROC-AUC не гарантує малої вартості чи високої precision, бо вона показує лише те, наскільки добре модель впорядковує транзакції за оцінкою, і не залежить від порога та від ціни помилок. А шахрайства дуже мало (близько 0.17%), тому навіть малий FPR дає багато хибних тривог на фоні невеликої кількості справжніх, і precision падає.
 > 
