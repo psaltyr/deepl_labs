@@ -1,0 +1,7 @@
+seg_train/
+seg_test/
+seg_pred/
+.venv/
+__pycache__/
+runs/*/weights.pt
+runs_debug/
