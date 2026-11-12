@@ -1,0 +1,109 @@
+{
+  "regime": "frozen",
+  "seed": 1,
+  "settings": {
+    "epochs": 8,
+    "steps_per_epoch": 38,
+    "transforms": {
+      "train": "RandomResizedCrop(160, scale=(0.7, 1.0)), RandomHorizontalFlip(), ToTensor(), Normalize",
+      "eval": "Resize((160, 160)), ToTensor(), Normalize",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "model": "resnet18, fc=Linear(512, 6)",
+    "weights": "IMAGENET1K_V1",
+    "eval_modules": [
+      "conv1",
+      "bn1",
+      "layer1",
+      "layer2",
+      "layer3",
+      "layer4"
+    ],
+    "optimizer": {
+      "name": "AdamW",
+      "weight_decay": 0.0001,
+      "lr_head": 0.003,
+      "lr_layer4": null,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08
+    },
+    "loss": "CrossEntropyLoss(mean)",
+    "train_loader": {
+      "batch_size": 32,
+      "shuffle": true,
+      "drop_last": false,
+      "num_workers": 0
+    },
+    "eval_loader": {
+      "batch_size": 64,
+      "shuffle": false,
+      "num_workers": 0
+    },
+    "bn": {
+      "momentum": 0.1,
+      "eps": 1e-05
+    }
+  },
+  "git_commit": "243c9aa8fb706e0fed7b803ca65ee14210cdca22",
+  "git_dirty": false,
+  "split_sha256": "b29c53c7e41b0c4bb36e54d8ca3a9bcbac11eca96abeab8ba4fbcf5937a160b8",
+  "python": "3.12.14",
+  "torch": "2.15.0+cpu",
+  "torchvision": "0.29.2+cpu",
+  "device": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6405392396450043,
+      "val_macro_f1": 0.8780604916105501
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.2747546354929606,
+      "val_macro_f1": 0.8885419575318035
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.23740450620651246,
+      "val_macro_f1": 0.8810410337675485
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.21665480275948842,
+      "val_macro_f1": 0.879204550092663
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.18987337609132132,
+      "val_macro_f1": 0.8842143065017435
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.19536490043004354,
+      "val_macro_f1": 0.8845538392360527
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.18514480988184612,
+      "val_macro_f1": 0.886375039391806
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.16545249233643214,
+      "val_macro_f1": 0.8842012435043274
+    }
+  ],
+  "train_time_s": 150.96108555793762
+}
